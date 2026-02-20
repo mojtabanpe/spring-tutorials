@@ -29,4 +29,9 @@ public class InstructorService {
         Optional<Instructor> instructor = instructorRepository.findById(id);
         return instructor.orElse(null);
     }
+
+    public Instructor findInstructorByJoinFetch(int id) {
+        Optional<Instructor> instructor = instructorRepository.findInstructorByJoinFetch(id);
+        return instructor.orElse(null);
+    }
 }
